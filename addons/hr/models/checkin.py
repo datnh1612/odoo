@@ -6,7 +6,7 @@ class CheckIn(models.Model):
 
     checkin_status = fields.Boolean("Check-In Status", default=True)
 
-    time_checkin = fields.Datetime("Time Check-In")
+    time_checkin = fields.Datetime("Time Check-In",required=True)
 
-    employee_id = fields.Many2one(comodel_name="hr.employee",string="Employee ID")
+    employee_id = fields.Many2one(comodel_name="hr.employee","user_id",string="Employee ID")
     employee_name = fields.Char("Name")
